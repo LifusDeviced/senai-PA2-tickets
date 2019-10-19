@@ -1,0 +1,41 @@
+{% extends "base.html.twig"%}
+{% import "_macro/cards.html.twig" as card%}
+
+{% block title %}Login{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="css/themes/form.css"/>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+               {{ card.events_card(
+                   "http://varelanoticias.com.br/wp-content/uploads/2018/07/bavi-1.jpg",
+                   "Bavi",
+                   "Arena Fonte Nova - Salvador",
+                   "199,00",
+                   "10/12/2019"
+               ) }}
+            </div>
+            <div class="col-sm">
+                {{ card.events_card(
+                    "https://pbs.twimg.com/media/EC6puMcXsAMU0_i.jpg",
+                    "Anipolitan",
+                    "Clube da Caixa - Estrada do Coco",
+                    "20,00",
+                    "22/03/2020"
+                ) }}
+            </div>
+            <div class="col-sm">
+                {{ card.events_card(
+                    "https://www.bnews.com.br/ckfinder/userfiles/fotos_e_imagens/ENTRETENIMENTO/CARNAVAL%202013/palcodorock_salvador.jpg",
+                    "Palco do Rock",
+                    "Avenida Orlando Gomes - Praia de Itapua",
+                    "100,00",
+                    "27/03/2020"
+                ) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}{% endblock %}
