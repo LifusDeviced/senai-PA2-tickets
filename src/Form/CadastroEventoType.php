@@ -19,7 +19,10 @@ class CadastroEventoType extends AbstractType
     {
         $builder
             ->add('nome_evento', TextType::class, ['label' => 'Nome do Evento'])
-            ->add('data', DateTimeType::class, ['label' => 'Data do Evento'])
+            ->add('data', DateTimeType::class, ['label' => 'Data do Evento',
+                'date_widget' => 'single_text',
+                'time_widget' => 'single_text',
+                ])
             ->add('valor', IntegerType::class, ['label' => 'Valor'])
             ->add('id_local_evento', EntityType::class,[
                 'class' => LocalEvento::class,

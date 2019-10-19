@@ -14,8 +14,21 @@
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                 <div class="card card-signin my-5">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Cadastro de Local de Evento</h5>
-                        {{ form(form) }}
+                        <h5 class="card-title text-center">Cadastro do Local</h5>
+                            {{ form_start(form) }}
+                            <div class="form-label-group">
+                                {{ form_widget(form.nome_local, {'attr': {'class': 'form-control' , 'placeholder': 'Nome do Local'}}) }}
+                                {{form_label(form.nome_local, 'Nome do Local')}}
+                            </div>
+
+                            <div class="form-label-group">
+                                {{ form_widget(form.capacidade, {'attr': {'class': 'form-control' , 'placeholder': 'Capacidade'}}) }}
+                                {{form_label(form.capacidade, 'Capacidade')}}
+                            </div>
+                            <div class="form-label-group">
+                                {{ form_widget(form.confirma, {'attr': {'class': 'btn btn-lg btn-primary btn-block text-uppercase'}}) }}
+                            </div>
+                            {{ form_end(form) }}
                     </div>
                 </div>
             </div>
@@ -23,3 +36,4 @@
     </div>
 {% endblock %}
 {% block javascripts %}{% endblock %}
+
