@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Details{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+    <div class="container">
+      <h2 class="titleDetails"> Detalhes do Evento </h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <img
+                            src="http://varelanoticias.com.br/wp-content/uploads/2018/07/bavi-1.jpg"
+                            alt="foto"
+                            style="width: 100%"
+                    >
+
+                </div>
+                <div class="col-6">
+                    <p class="text">Dentro do grupo que classifica para a final do nordestão 2020,
+                        o Bahia terá mais uma batalha pela frente. O Esquadrão recebe o Vitória na Fonte Nova. Os ingressos para o duelo deste sábado (10), às 19h, estão à venda para a torcida do Esquadrão e custam entre R$ 199,00.
+                        A venda acontece pela internet e nos pontos físicos.
+                </div>
+            </div>
+            <div class="container" >
+                <h2 class="titleDescription"> Bavi </h2>
+
+                <div class="row">
+                    <p class="titleLocal">Local:</p>
+                    <p class="textLocal" style="font-size: 15px">Arena Fonte Nova - Salvador</p>
+                </div>
+                <div class="row" style="width: 100%; flex-direction: row; text-align: start">
+                    <p class="titlePrice" style="font-size: 15px; margin-left: 10px; color: black">Valor</p>
+                    <p class="textPrice" style="font-size: 15px">199,00</p>
+                </div>
+                <div class="row" style="width: 100%; flex-direction: row; text-align: start">
+                    <p class="titleDate" style="font-size: 15px; margin-left: 10px; color: black">Data</p>
+                    <p class="textPrice" style="font-size: 15px">10/12/2019</p>
+                </div>
+                <div class="row" style="width: 100%; flex-direction: row; text-align: start">
+                    <p class="titleDate" style="font-size: 15px; margin-left: 10px; color: black">Horário</p>
+                    <p class="textPrice" style="font-size: 15px">19:00 hrs</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
