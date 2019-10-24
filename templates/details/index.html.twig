@@ -3,51 +3,95 @@
 {% block title %}Details{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
     <div class="container">
-      <h2 class="titleDetails"> Detalhes do Evento </h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <img
-                            src="http://varelanoticias.com.br/wp-content/uploads/2018/07/bavi-1.jpg"
-                            alt="foto"
-                            style="width: 100%"
-                    >
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="card bg-light m-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 text-center py-5">
+                                <h2 class="titleDetails text-primary"> Detalhes do Evento </h2>
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <img
+                                        class="img-fluid col-12 offset-1"
+                                        src="http://varelanoticias.com.br/wp-content/uploads/2018/07/bavi-1.jpg"
+                                        alt="foto"
+                                >
 
-                </div>
-                <div class="col-6">
-                    <p class="text">Dentro do grupo que classifica para a final do nordestão 2020,
-                        o Bahia terá mais uma batalha pela frente. O Esquadrão recebe o Vitória na Fonte Nova. Os ingressos para o duelo deste sábado (10), às 19h, estão à venda para a torcida do Esquadrão e custam entre R$ 199,00.
-                        A venda acontece pela internet e nos pontos físicos.
-                </div>
-            </div>
-            <div class="container" >
-                <h2 class="titleDescription"> Bavi </h2>
+                            </div>
+                            <div class="col-6 px-4" >
+                                <h3 class="text-center m-3"> Bavi </h3>
 
-                <div class="row">
-                    <p class="titleLocal">Local:</p>
-                    <p class="textLocal" style="font-size: 15px">Arena Fonte Nova - Salvador</p>
-                </div>
-                <div class="row" style="width: 100%; flex-direction: row; text-align: start">
-                    <p class="titlePrice" style="font-size: 15px; margin-left: 10px; color: black">Valor</p>
-                    <p class="textPrice" style="font-size: 15px">199,00</p>
-                </div>
-                <div class="row" style="width: 100%; flex-direction: row; text-align: start">
-                    <p class="titleDate" style="font-size: 15px; margin-left: 10px; color: black">Data</p>
-                    <p class="textPrice" style="font-size: 15px">10/12/2019</p>
-                </div>
-                <div class="row" style="width: 100%; flex-direction: row; text-align: start">
-                    <p class="titleDate" style="font-size: 15px; margin-left: 10px; color: black">Horário</p>
-                    <p class="textPrice" style="font-size: 15px">19:00 hrs</p>
-                </div>
+                                <div class="row">
+                                    <p class="titleLocal">Local:</p>
+                                    <p class="textLocal" style="font-size: 15px">Arena Fonte Nova - Salvador</p>
+                                </div>
+                                <div class="row" style="width: 100%; flex-direction: row; text-align: start">
+                                    <p class="titlePrice" style="font-size: 15px; margin-left: 10px; color: black">Valor</p>
+                                    <p class="textPrice" style="font-size: 15px">199,00</p>
+                                </div>
+                                <div class="row" style="width: 100%; flex-direction: row; text-align: start">
+                                    <p class="titleDate" style="font-size: 15px; margin-left: 10px; color: black">Data</p>
+                                    <p class="textPrice" style="font-size: 15px">10/12/2019</p>
+                                </div>
+                                <div class="row" style="width: 100%; flex-direction: row; text-align: start">
+                                    <p class="titleDate" style="font-size: 15px; margin-left: 10px; color: black">Horário</p>
+                                    <p class="textPrice" style="font-size: 15px">19:00 hrs</p>
+                                </div>
 
+                            </div>
+                        </div>
+                        <div class="row justify-content-center ">
+                            <div class="col-10 text-center m-3 ">
+                                <p class="text">Dentro do grupo que classifica para a final do nordestão 2020,
+                                    o Bahia terá mais uma batalha pela frente. O Esquadrão recebe o Vitória na Fonte Nova. Os ingressos para o duelo deste sábado (10), às 19h, estão à venda para a torcida do Esquadrão e custam entre R$ 199,00.
+                                    A venda acontece pela internet e nos pontos físicos.
+                            </div>
+                        </div>
+                        <div class="row justify-content-end mr-3">
+                            <button type="button" class=" btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                                Comprar Aqui!
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-primary " id="exampleModalLabel">Falta pouco, finalize sua compra</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="cardNumber">Numero do Cartão</label>
+                            <input type="text" class="form-control" id="cardNumber" aria-describedby="emailHelp" placeholder="numero do Cartão">
+                        </div>
+                        <div class="form-group">
+                            <label for="CVV">CVV</label>
+                            <input type="text" class="form-control" id="CVV" placeholder="CVV">
+                        </div>
+                        <div class="form-group">
+                            <label for="validate">validate</label>
+                            <input type="text" class="form-control" id="validate" placeholder="validade">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
