@@ -34,6 +34,11 @@ class Cliente
     private $telefone;
 
     /**
+     * @ORM\Column(type="string")
+     */
+    private $senha;
+
+    /**
      * @ORM\OneToMany(targetEntity="App\Entity\Ingresso", mappedBy="id_cliente")
      */
     private $id_ingresso;
@@ -80,6 +85,18 @@ class Cliente
     public function setTelefone(string $telefone): self
     {
         $this->telefone = $telefone;
+
+        return $this;
+    }
+
+    public function getSenha(): ?string
+    {
+        return $this->senha;
+    }
+
+    public function setSenha(string $senha): self
+    {
+        $this->senha = $senha;
 
         return $this;
     }
