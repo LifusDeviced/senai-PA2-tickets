@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20191030192140 extends AbstractMigration
+final class Version20191105011527 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -24,7 +24,7 @@ final class Version20191030192140 extends AbstractMigration
 
         $this->addSql('CREATE TABLE cliente (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nome_cliente VARCHAR(150) NOT NULL, roles CLOB NOT NULL --(DC2Type:json)
         , email VARCHAR(150) NOT NULL, cpf VARCHAR(30) NOT NULL, telefone VARCHAR(30) NOT NULL, senha VARCHAR(255) NOT NULL)');
-        $this->addSql('CREATE TABLE evento (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, id_local_evento_id INTEGER NOT NULL, nome_evento VARCHAR(100) NOT NULL, data DATETIME NOT NULL, valor DOUBLE PRECISION NOT NULL)');
+        $this->addSql('CREATE TABLE evento (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, id_local_evento_id INTEGER NOT NULL, nome_evento VARCHAR(100) NOT NULL, descricao VARCHAR(500) NOT NULL, link_imagem VARCHAR(250) NOT NULL, data DATETIME NOT NULL, valor DOUBLE PRECISION NOT NULL)');
         $this->addSql('CREATE INDEX IDX_47860B0590BCB496 ON evento (id_local_evento_id)');
         $this->addSql('CREATE TABLE ingresso (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, id_cliente_id INTEGER NOT NULL, id_evento_id INTEGER NOT NULL, codigo VARCHAR(30) NOT NULL)');
         $this->addSql('CREATE INDEX IDX_64BC58C87BF9CE86 ON ingresso (id_cliente_id)');
