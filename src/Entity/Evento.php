@@ -24,6 +24,17 @@ class Evento
     private $nome_evento;
 
     /**
+     * @ORM\Column(type="string", length=500)
+     */
+    private $descricao;
+
+    /**
+     * @ORM\Column(type="string", length=250)
+     */
+    private $link_imagem;
+
+
+    /**
      * @ORM\Column(type="datetime")
      */
     private $data;
@@ -132,4 +143,29 @@ class Evento
 
         return $this;
     }
+
+    public function getDescricao(): ?string
+    {
+        return $this->descricao;
+    }
+
+    public function setDescricao(string $descricao): self
+    {
+        $this->descricao = $descricao;
+
+        return $this;
+    }
+
+    public function getLinkImagem(): ?string
+    {
+        return $this->link_imagem;
+    }
+
+    public function setLinkImagem(string $link_imagem): self
+    {
+        $this->link_imagem = $link_imagem;
+
+        return $this;
+    }
+
 }
