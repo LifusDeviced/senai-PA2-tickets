@@ -33,7 +33,6 @@ class CadastroClienteController extends AbstractController
                     $form->get('senha')->getData()
                 )
             );
-            $cliente->setRoles(["ROLE_ADMIN"]);
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($cliente);
