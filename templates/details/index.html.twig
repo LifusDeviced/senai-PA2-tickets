@@ -22,22 +22,22 @@
                                 >
                             </div>
                             <div class="col-6 px-4" >
-                                <h3 class="text-center m-3"> Bavi </h3>
+                                <h3 class="text-center m-3"> {{ evento.nome_evento}} </h3>
                                 <div class="row">
                                     <p class="titleLocal">Local:</p>
-                                    <p class="textLocal" style="font-size: 15px">Arena Fonte Nova - Salvador</p>
+                                    <p class="textLocal" style="font-size: 15px">{{ evento.id_local_evento.nome_local }}</p>
                                 </div>
                                 <div class="row" style="width: 100%; flex-direction: row; text-align: start">
                                     <p class="titlePrice" style="font-size: 15px; margin-left: 10px; color: black">Valor</p>
-                                    <p class="textPrice" style="font-size: 15px">199,00</p>
+                                    <p class="textPrice" style="font-size: 15px">{{ evento.valor}}</p>
                                 </div>
                                 <div class="row" style="width: 100%; flex-direction: row; text-align: start">
                                     <p class="titleDate" style="font-size: 15px; margin-left: 10px; color: black">Data</p>
-                                    <p class="textPrice" style="font-size: 15px">10/12/2019</p>
+                                    <p class="textPrice" style="font-size: 15px">{{ evento.data|date("d/m/Y")}}</p>
                                 </div>
                                 <div class="row" style="width: 100%; flex-direction: row; text-align: start">
                                     <p class="titleDate" style="font-size: 15px; margin-left: 10px; color: black">Horário</p>
-                                    <p class="textPrice" style="font-size: 15px">19:00 hrs</p>
+                                    <p class="textPrice" style="font-size: 15px">{{ evento.data|date("HH")}}</p>
                                 </div>
 
                             </div>
