@@ -26,6 +26,14 @@
                             {{ form_widget(form.data) }}
                         </div>
 
+                        <div class="form-label-group">
+                            {{ form_widget(form.descricao, {'attr': {'class': 'form-control' , 'placeholder': 'Descrição'}}) }}
+                        </div>
+
+                        <div class="form-label-group">
+                            {{ form_widget(form.link_imagem, {'attr': {'class': 'form-control' , 'placeholder': 'Link da Imagem'}}) }}
+                            {{form_label(form.link_imagem, 'Link da Imagem')}}
+                        </div>
 
                         <div class="form-label-group">
                             {{ form_widget(form.valor, {'attr': {'class': 'form-control' , 'placeholder': 'Valor'}}) }}
