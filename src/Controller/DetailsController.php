@@ -10,9 +10,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class DetailsController extends AbstractController
 {
     /**
-     * @Route("/details", name="details")
+     * @Route("/details/{id}", name="details")
      */
-    public function details(Request $request)
+    public function index(Evento $evento)
     {
         $id =$request->get('eventos');
         if($id != null) {
