@@ -16,37 +16,35 @@
                         <div class="row align-items-center">
                             <div class="col-6">
                                 <img
-                                        class="img-fluid col-12 offset-1"
-                                        src="http://varelanoticias.com.br/wp-content/uploads/2018/07/bavi-1.jpg"
-                                        alt="foto"
+                                    class="img-fluid col-12 offset-1"
+                                    src="{{ event.link_imagem }}"
+                                    alt="foto"
                                 >
                             </div>
                             <div class="col-6 px-4" >
-                                <h3 class="text-center m-3"> Bavi </h3>
+                                <h3 class="text-center m-3"> {{ evento.nome_evento}} </h3>
                                 <div class="row">
                                     <p class="titleLocal">Local:</p>
-                                    <p class="textLocal" style="font-size: 15px">Arena Fonte Nova - Salvador</p>
+                                    <p class="textLocal" style="font-size: 15px">{{ evento.id_local_evento.nome_local }}</p>
                                 </div>
                                 <div class="row" style="width: 100%; flex-direction: row; text-align: start">
                                     <p class="titlePrice" style="font-size: 15px; margin-left: 10px; color: black">Valor</p>
-                                    <p class="textPrice" style="font-size: 15px">199,00</p>
+                                    <p class="textPrice" style="font-size: 15px">{{ evento.valor}}</p>
                                 </div>
                                 <div class="row" style="width: 100%; flex-direction: row; text-align: start">
                                     <p class="titleDate" style="font-size: 15px; margin-left: 10px; color: black">Data</p>
-                                    <p class="textPrice" style="font-size: 15px">10/12/2019</p>
+                                    <p class="textPrice" style="font-size: 15px">{{ evento.data|date("d/m/Y")}}</p>
                                 </div>
                                 <div class="row" style="width: 100%; flex-direction: row; text-align: start">
                                     <p class="titleDate" style="font-size: 15px; margin-left: 10px; color: black">Horário</p>
-                                    <p class="textPrice" style="font-size: 15px">19:00 hrs</p>
+                                    <p class="textPrice" style="font-size: 15px">{{ evento.data|date("HH")}}</p>
                                 </div>
 
                             </div>
                         </div>
                         <div class="row justify-content-center ">
                             <div class="col-10 text-center m-3 ">
-                                <p class="text">Dentro do grupo que classifica para a final do nordestão 2020,
-                                    o Bahia terá mais uma batalha pela frente. O Esquadrão recebe o Vitória na Fonte Nova. Os ingressos para o duelo deste sábado (10), às 19h, estão à venda para a torcida do Esquadrão e custam entre R$ 199,00.
-                                    A venda acontece pela internet e nos pontos físicos.
+                                <p class="text">{{ event.descricao }}
                             </div>
                         </div>
                         <div class="row justify-content-end mr-3">
