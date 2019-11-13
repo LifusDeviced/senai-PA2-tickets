@@ -24,7 +24,7 @@ class CadastroEventoType extends AbstractType
             ->add('link_imagem',TextType::class, ['label' => 'Link da Imagem'])
             ->add('data', DateTimeType::class, ['label' => 'Data do Evento',
                 'date_widget' => 'single_text',
-                'time_widget' => 'single_text',
+                'time_widget' => 'choice',
                 ])
             ->add('valor', IntegerType::class, ['label' => 'Valor'])
             ->add('id_local_evento', EntityType::class,[
