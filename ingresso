@@ -1,0 +1,41 @@
+​<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ingressos</title>
+  <link rel="stylesheet/scss" type="text/scss" href="styles.scss">
+</head>
+
+<body>
+  <div class="cardWrap">
+    <div class="card cardLeft">
+      <h1>Ticket <span>Evento</span></h1>
+      <div class="title">
+        <h2>Nome do evento</h2>
+        <span>evento</span>
+      </div>
+      <div class="name">
+        <h2>Nome do Cliente</h2>
+        <span>name</span>
+      </div>
+      <div class="date">
+        <h2>xx/xx/xx</h2>
+        <span>date</span>
+      </div>
+      <div class="time">
+        <h2>12:00</h2>
+        <span>time</span>
+      </div>
+
+    </div>
+    <div class="card cardRight">
+      <div class="number">
+        <h3>0000</h3>
+        <span>cadeira</span>
+      </div>
+      <div class="barcode"></div>
+    </div>
+  </div>
+</body>
+</html>
