@@ -17,7 +17,7 @@ class Ingresso
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=30)
+     * @ORM\Column(type="integer")
      */
     private $codigo;
 
@@ -38,12 +38,12 @@ class Ingresso
         return $this->id;
     }
 
-    public function getCodigo(): ?string
+    public function getCodigo(): ?int
     {
         return $this->codigo;
     }
 
-    public function setCodigo(string $codigo): self
+    public function setCodigo(int $codigo): self
     {
         $this->codigo = $codigo;
 

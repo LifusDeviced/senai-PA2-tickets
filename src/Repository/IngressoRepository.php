@@ -36,15 +36,14 @@ class IngressoRepository extends ServiceEntityRepository
     }
     */
 
-    /*
-    public function findOneBySomeField($value): ?Ingresso
+    public function findByCodigo($evento)
     {
         return $this->createQueryBuilder('i')
-            ->andWhere('i.exampleField = :val')
-            ->setParameter('val', $value)
+            ->select('MAX(i.codigo)')
+            ->where('i.id_evento = :evento')
+            ->setParameter('evento', $evento)
             ->getQuery()
-            ->getOneOrNullResult()
-        ;
+            ->getResult();
     }
-    */
+
 }
