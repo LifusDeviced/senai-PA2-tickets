@@ -1,15 +1,18 @@
 {% extends "base.html.twig"%}
 {% import "_macro/cards.html.twig" as card%}
 
-{% block title %}Login{% endblock %}
+{% block title %}Tickents{% endblock %}
 {% block stylesheets %}
     <link rel="stylesheet" href="css/themes/form.css"/>
+    <style>
+        .eventCard { margin: 20px 0; }
+    </style>
 {% endblock %}
 {% block body %}
     <div class="container">
         <div class="row">
             {% for evento in eventos %}
-            <div class="col-sm">
+            <div class="col-sm eventCard">
                 <a href="{{ path("details", {id: evento.id}) }}">
                 {{ card.events_card(
                     evento.LinkImagem ,

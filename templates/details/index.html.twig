@@ -16,9 +16,10 @@
                         <div class="row align-items-center">
                             <div class="col-6">
                                 <img
-                                        class="img-fluid col-12 offset-1"
-                                        alt="foto"
-                                        src= {{ evento.LinkImagem }}
+                                    class="img-fluid col-12 offset-1"
+                                    alt="foto"
+                                    src= {{ evento.LinkImagem }}
+                                    onerror="this.src='https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/bltf3faf1d90f62f985/5d94af4f73942313e3c41d1e/illustration-justifyourticket-header.png'"
                                 >
                             </div>
                             <div class="col-6 px-4" >
@@ -33,7 +34,7 @@
                                 </div>
                                 <div class="row" style="width: 100%; flex-direction: row; text-align: start">
                                     <p class="titleDate" style="font-size: 15px; margin-left: 10px; color: black">Data: </p>
-                                    <p class="textPrice" style="font-size: 15px; margin-left: 5px">{{evento.data|date('d-m-Y')}}</p>
+                                    <p class="textPrice" style="font-size: 15px; margin-left: 5px">{{evento.data|date('d/m/Y')}}</p>
                                 </div>
                                 <div class="row" style="width: 100%; flex-direction: row; text-align: start">
                                     <p class="titleDate" style="font-size: 15px; margin-left: 10px; color: black">Horário: </p>
@@ -84,7 +85,7 @@
                         {{ form_widget(form.CVV, {'attr': {'class': 'form-control' , 'placeholder': 'CVV'}}) }}
                     </div>
                     <div class="form-group">
-                        <label for="validate">validade</label>
+                        <label for="validate">Validade</label>
                         {{ form_widget(form.validate, {'attr': {'class': 'form-control' , 'placeholder': 'Validade'}}) }}
                     </div>
                     <div class="modal-footer">

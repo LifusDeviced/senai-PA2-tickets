@@ -2,6 +2,9 @@
 {% block title %}Ingresso{% endblock %}
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/themes/styles2.css') }}"/>
+    <style>
+        .price { text-align: center }
+    </style>
 {% endblock %}
 
 {% block body %}
@@ -28,6 +31,7 @@
 
         </div>
         <div class="card cardRight">
+            <h1 class="price"> R$ {{ ingresso.getIdEvento().getValor() }}</h1>
             <div class="number">
                 <h3>{{ingresso.getCodigo()}}</h3>
                 <span>cadeira</span>

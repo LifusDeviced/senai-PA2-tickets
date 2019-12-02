@@ -7,7 +7,7 @@ use App\Entity\LocalEvento;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -26,7 +26,7 @@ class CadastroEventoType extends AbstractType
                 'date_widget' => 'single_text',
                 'time_widget' => 'choice',
                 ])
-            ->add('valor', IntegerType::class, ['label' => 'Valor'])
+            ->add('valor', NumberType::class, ['label' => 'Valor'])
             ->add('id_local_evento', EntityType::class,[
                 'class' => LocalEvento::class,
                 'choice_label' => 'nome_local'
