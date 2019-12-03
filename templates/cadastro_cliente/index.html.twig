@@ -4,6 +4,11 @@
     <link rel="stylesheet" href="css/themes/form.css"/>
 {% endblock %}
 {% block body %}
+    {% for error in errors %}
+        <div class="alert alert-danger" role="alert">
+            {{ error.message }}
+        </div>
+    {% endfor %}
     {% if realizado %}
         <div class="alert alert-danger" role="alert">
             Cadastro Realizado

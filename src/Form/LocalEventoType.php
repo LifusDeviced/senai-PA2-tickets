@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\GreaterThan;
 
 class LocalEventoType extends AbstractType
 {
@@ -16,7 +17,8 @@ class LocalEventoType extends AbstractType
     {
         $builder
             ->add('nome_local', TextType::class, ['label' => 'Nome do Local'])
-            ->add('capacidade', IntegerType::class, ['label' => 'Capacidade'])
+            ->add('capacidade', IntegerType::class,
+                ['label' => 'Capacidade',  'constraints' => new GreaterThan(['value' => 0, 'message' => 'O valor não pode ser negativo'])])
             ->add('confirma', SubmitType::class)
         ;
     }

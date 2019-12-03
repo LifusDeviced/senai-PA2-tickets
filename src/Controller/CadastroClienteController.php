@@ -11,13 +11,14 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Guard\GuardAuthenticatorHandler;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 class CadastroClienteController extends AbstractController
 {
     /**
      * @Route("/cadastro", name="cadastro_cliente")
      */
-    public function cadastro_cliente (Request $request, UserPasswordEncoderInterface $passwordEncoder, GuardAuthenticatorHandler $guardHandler, LoginAuthenticator $authenticator) : Response
+    public function cadastro_cliente (Request $request, ValidatorInterface $validator, UserPasswordEncoderInterface $passwordEncoder, GuardAuthenticatorHandler $guardHandler, LoginAuthenticator $authenticator) : Response
     {
         $realizado = false;
         $cliente = new Cliente();
@@ -47,11 +48,13 @@ class CadastroClienteController extends AbstractController
                 'main' // firewall name in security.yaml
             );
         }
+        $errors = $validator->validate($form);
 
         return $this->render('cadastro_cliente/index.html.twig', [
             'controller_name' => 'CadastroClienteController',        
             'form' => $form->createView(),
             'realizado' => $realizado,
+            'errors' => $errors
         ]);
     }
 }
