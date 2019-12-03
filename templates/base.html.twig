@@ -10,7 +10,7 @@
     <body>
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <a class="navbar-brand" href={{ path("home") }}>Tickents</a>
+                <a class="navbar-brand" href={{ path("home") }}>Tickets</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -25,6 +25,9 @@
                             <a class="nav-link" href={{ path("cadastro_local") }}>Novo Local</a>
                         </li>
                         {% endif %}
+                        <li class="nav-item">
+                            <a class="nav-link" href={{ path("manage_ingresso") }}>Gerenciar Ingressos</a>
+                        </li>
                         <li class="nav-link" style="display: flex">
                             <a class="nav-link" href="{{ path('app_logout') }}" style="padding: 0">Logout</a>
                         </li>

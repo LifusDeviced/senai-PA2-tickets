@@ -36,15 +36,16 @@ class EventoRepository extends ServiceEntityRepository
     }
     */
 
-    /*
-    public function findOneBySomeField($value): ?Evento
+
+    public function findDatas($value): ?array
     {
         return $this->createQueryBuilder('e')
-            ->andWhere('e.exampleField = :val')
-            ->setParameter('val', $value)
+            ->select('e.data')
+            ->where('e.id_local_evento = :idevento')
+            ->setParameter('idevento', $value)
             ->getQuery()
-            ->getOneOrNullResult()
+            ->getResult()
         ;
     }
-    */
+
 }

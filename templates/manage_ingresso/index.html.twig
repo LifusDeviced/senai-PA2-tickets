@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gerenciamento de Ingressos{% endblock %}
+{% block stylesheets %}
+    <style>
+        i
+        {
+            margin-left: 5px;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+
+    <div class="wrapper">
+        <div class="container" style="margin-top: 50px">
+            <div class="card">
+                <div class="card-body">
+                    <h1>Gerenciamento de Ingressos de {{ usuario.getNomeCliente() }}</h1>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Nome do Evento</th>
+                            <th scope="col">Local do Evento</th>
+                            <th scope="col">Valor do Ingressos</th>
+                            <th scope="col">Data do Evento</th>
+                            <th scope="col">Ver Ingresso</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        {% for ingresso in ingressos %}
+                            <tr>
+                                <td>{{ingresso.getIdEvento().getNomeEvento()}}</td>
+                                <td>{{ingresso.getIdEvento().getIdLocalEvento().getNomeLocal()}}</td>
+                                <td>{{ingresso.getIdEvento().getValor()}}</td>
+                                <td>{{ingresso.getIdEvento().getData()|date('d/m/Y')}}</td>
+                                <td>
+                                    <a href="{{ path('ingresso', {idingresso: ingresso.getId()}) }}" class="btn btn btn-success">Visualizar</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
