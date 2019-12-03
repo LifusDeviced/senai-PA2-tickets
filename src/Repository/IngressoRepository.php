@@ -46,4 +46,12 @@ class IngressoRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+    public function findByCliente($id)
+    {
+        return $this->createQueryBuilder('i')
+            ->where('i.id_cliente = :id')
+            ->setParameter('id', $id)
+            ->getQuery()
+            ->getResult();
+    }
 }
